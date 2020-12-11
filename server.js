@@ -39,13 +39,13 @@ app.get("/", (req, res) => {
 app.use(playerController);
 
 // API Routes
-app.get("/api/config", (req, res) => {
+app.get("/api/rooms", (req, res) => {
   res.json({
     success: true,
   });
 });
 
-app.post("/api/test", (req, res) => {
+app.post("/api/rooms", (req, res) => {
   console.log(req.body);
 });
 // db.sequelize.sync({ force: true }).then(() => {
