@@ -7,12 +7,12 @@ USE reserve_db;
 -- Status (BOOLEAN): available / not available
 -- timestamp (createdAt?)
  
-CREATE TABLE `rooms` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `room_name` varchar(45) NOT NULL,
-  `status` BOOLEAN DEFAULT false,
-  `date-created` datetime DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`)
-  )
+-- CREATE TABLE `rooms` (
+--   `id` int NOT NULL AUTO_INCREMENT,
+--   `room_name` varchar(45) NOT NULL,
+--   `status` BOOLEAN DEFAULT false,
+--   `date-created` datetime DEFAULT CURRENT_TIMESTAMP,
+--   PRIMARY KEY (`id`)
+--   )
   
-  SELECT * FROM rooms;
+--   SELECT * FROM rooms;
