@@ -1,6 +1,7 @@
 const express = require("express");
 const exphbs = require("express-handlebars");
 const handlebars = require("handlebars");
+const sweetalert2 = require("sweetalert2");
 const {
   allowInsecurePrototypeAccess,
 } = require("@handlebars/allow-prototype-access");
