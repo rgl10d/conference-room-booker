@@ -1,14 +1,20 @@
+{{!-- Create a new room form --}}
 <form>
-  <div class="form-icons">
-    <h4>Register for an account</h4>
+    <div class="form-icons">
+        <h4>Create a New Study Room</h4>
 
-    <div class="input-group">
-      <span class="input-group-label">
-        <i class="fa fa-user"></i>
-      </span>
-      <input class="input-group-field" type="text" placeholder="Room name">
-    </div>
+        <div class="input-group">
+            <span class="input-group-label">
+                <i class="fa fa-user"></i>
+            </span>
+            <input class="input-group-field" id="new-room-name" type="text" placeholder="Room name">
+        </div>
 
 
-  <button class="button expanded">Sign Up</button>
+        <button class="button expanded" id="submit-new-room">Create Room</button>
 </form>
+
+
+{{!-- Abstracting out the javascript --}}
+<script type="text/javascript" src="/assets/js/newRoom.js">
+</script>
