@@ -36,7 +36,11 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
-// CONTROLLER FOR THE ROOM MODEL
+//to show the create new room form
+app.get("/new", (req, res) => {
+  res.render("new-room");
+});
+
 app.use(roomController);
 
 // API Routes
