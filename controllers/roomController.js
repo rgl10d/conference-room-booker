@@ -24,4 +24,18 @@ router.post("/api/rooms", (req, res) => {
     });
 });
 
+router.put("/api/rooms/:id", (req, res) => {
+  db.Room.update(req.body, {
+    where: {
+      id: req.params.id,
+    }
+  })
+  .then((updatedRoom) => {
+    res.json(updatedRoom)
+  })
+  .catch((err) => {
+    console.log(err);
+  });
+});
+
 module.exports = router;
