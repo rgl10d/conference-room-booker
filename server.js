@@ -36,6 +36,7 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
+// CONTROLLER FOR THE ROOM MODEL
 app.use(roomController);
 
 // API Routes

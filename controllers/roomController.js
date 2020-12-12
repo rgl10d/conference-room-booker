@@ -38,4 +38,19 @@ router.put("/api/rooms/:id", (req, res) => {
   });
 });
 
+router.delete("/api/rooms/:id", (req, res) => {
+  db.Room.destroy({
+    where: {
+      id: req.body.id
+    }
+  })
+  .then((response) => {
+    console.log(response);
+    res.json(response);
+  })
+  .catch((err) => {
+    console.log(err);
+  })
+});
+
 module.exports = router;
