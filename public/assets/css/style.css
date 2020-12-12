@@ -1,0 +1,18 @@
+body{
+    margin:block;
+    margin: 25px
+}
+
+section
+{
+    margin: 15px;
+    margin-left: 50px;
+    text-align: right;
+    
+}
+
+img
+{
+    width: 75px;
+    height: 75px;
+}
