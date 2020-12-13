@@ -39,6 +39,7 @@ app.get("/api/rooms", (req, res) => {
   });
 });
 
+//Test
 app.post("/api/rooms", (req, res) => {
   console.log(req.body);
 
@@ -62,14 +63,15 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
+app.use(roomController);
+
 //GET view route to show the create new room form
 app.get("/new", (req, res) => {
   res.render("new-room");
 });
 
-app.use(roomController);
 
-
+//Syncs the Sequelize models, MySQL reserve_db, and website to keep track of user input
 // db.sequelize.sync({ force: true }).then(() => {
 db.sequelize.sync().then(() => {
   app.listen(PORT, () => {
