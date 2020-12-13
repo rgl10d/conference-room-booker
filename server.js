@@ -30,9 +30,23 @@ app.engine(
 );
 app.set("view engine", "handlebars");
 
-// ROUTES
+// API & Views ROUTES:
+
+// API Routes
+app.get("/api/rooms", (req, res) => {
+  res.json({
+    success: true,
+  });
+});
+
+app.post("/api/rooms", (req, res) => {
+  console.log(req.body);
+
+});
+
 
 // Views Routes
+
 app.get("/", (req, res) => {
   db.Room.findAll({})
     .then((allRooms) => {
@@ -55,17 +69,7 @@ app.get("/new", (req, res) => {
 
 app.use(roomController);
 
-// API Routes
-app.get("/api/rooms", (req, res) => {
-  res.json({
-    success: true,
-  });
-});
 
-app.post("/api/rooms", (req, res) => {
-  console.log(req.body);
-
-});
 // db.sequelize.sync({ force: true }).then(() => {
 db.sequelize.sync().then(() => {
   app.listen(PORT, () => {
