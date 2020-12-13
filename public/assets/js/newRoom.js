@@ -5,11 +5,12 @@ $( document ).ready(function() {
     console.log( "I am still working.");
 
     $("submit-new-room").on("click", function(event){
-        event.preventDefault();
-       IamOn();
+        // event.preventDefault();
+        // console.log("I was clicked.");
     });
 
-    function IamOn(){
-        console.log("I was clicked.");
-    };
+
+
+
+
 });
