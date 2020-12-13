@@ -59,6 +59,6 @@ router.delete("/api/rooms/:id", (req, res) => {
 
 module.exports = router;
 
-router.get("/room/new", (req, res) =>{
+router.get("/new", (req, res) =>{
   res.render("new-room");
 })

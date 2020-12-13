@@ -30,24 +30,9 @@ app.engine(
 );
 app.set("view engine", "handlebars");
 
-// API & Views ROUTES:
-
-// API Routes
-app.get("/api/rooms", (req, res) => {
-  res.json({
-    success: true,
-  });
-});
-
-//Test
-app.post("/api/rooms", (req, res) => {
-  console.log(req.body);
-
-});
-
+// Views & API ROUTES:
 
 // Views Routes
-
 app.get("/", (req, res) => {
   db.Room.findAll({})
     .then((allRooms) => {
@@ -64,6 +49,20 @@ app.get("/", (req, res) => {
 });
 
 app.use(roomController);
+
+
+// API Routes
+app.get("/api/rooms", (req, res) => {
+  res.json({
+    success: true,
+  });
+});
+
+app.post("/api/rooms", (req, res) => {
+  console.log(req.body);
+
+});
+
 
 //GET view route to show the create new room form
 app.get("/new", (req, res) => {
