@@ -11,17 +11,13 @@ $( document ).ready(function() {
 
         $.ajax({
             method: "POST",
-            url: "/index/new",
+            url: "/api/rooms",
             data: {
                 name
             },
-        }).then(response => {
+        }).then((response) => {
             window.location.replace("/rooms");
-        })
+        });
     });
-
-
-
-
 
 });

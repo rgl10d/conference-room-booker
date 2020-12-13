@@ -15,7 +15,7 @@ router.get("/rooms", (req, res) => {
     });
 });
 
-//POST Route connected to controller for putting newly-created rooms on an object
+//POST Route connected to controller for putting newly-created rooms on the rooms.handlebars view
 router.post("/api/rooms", (req, res) => {
     db.Room.create(req.body)
     .then((newRoom) => {
@@ -59,6 +59,6 @@ router.delete("/api/rooms/:id", (req, res) => {
 
 module.exports = router;
 
-router.get("/index/new", (req, res) =>{
+router.get("/room/new", (req, res) =>{
   res.render("new-room");
 })
