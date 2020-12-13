@@ -6,8 +6,18 @@ $( document ).ready(function() {
 
     $("#new-room-form").on("submit", function(event){
         event.preventDefault();
-        const roomNameInput = $("#new-room-name").val();
-        console.log(roomNameInput);
+        const name = $("#new-room-name").val();
+        console.log(name);
+
+        $.ajax({
+            method: "POST",
+            url: "/index/new",
+            data: {
+                name
+            },
+        }).then(response => {
+            window.location.replace("/rooms");
+        })
     });
 
 
