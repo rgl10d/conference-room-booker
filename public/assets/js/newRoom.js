@@ -3,4 +3,13 @@
 // Use post request to take in the data from the new-room form
 $( document ).ready(function() {
     console.log( "I am still working.");
+
+    $("submit-new-room").on("click", function(event){
+        event.preventDefault();
+       IamOn();
+    });
+
+    function IamOn(){
+        console.log("I was clicked.");
+    };
 });
