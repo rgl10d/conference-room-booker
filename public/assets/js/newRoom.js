@@ -4,9 +4,10 @@
 $( document ).ready(function() {
     console.log( "I am still working.");
 
-    $("submit-new-room").on("click", function(event){
-        // event.preventDefault();
-        // console.log("I was clicked.");
+    $("#new-room-form").on("submit", function(event){
+        event.preventDefault();
+        const roomNameInput = $("#new-room-name").val();
+        console.log(roomNameInput);
     });
 
 
