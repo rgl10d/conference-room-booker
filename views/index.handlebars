@@ -1,21 +1,18 @@
-<div class="container">
-    <div class="row">
-        <h1>
-            The Reserve: Rooms Dashboard
-        </h1>
-    </div>
-    <div class="row">
-        <p>To get started, click the Create a Room button to make the name of the study room you would like to check into.</p>
-        <a href="/views/new-room.handlebars" class="button round">Create a Room</a>
+{{!-- Rooms Dashboard Heading --}}
+    <h1 id="title-heading">
+        The Reserve: Rooms Dashboard
+    </h1>
+{{!-- Instructions and Check-In Button --}}
+    <div  id="instructions">
+        <p>To get started, click the Create a Room button to make the name of the study room you would like to check
+            into.</p>
+        <a href="/new" class="button round">Create a Room</a>
         <p>If you already see the name of the desired study room on the page, click the Check-In button to study!</p>
-        <p>The Room Status will tell you if a room is available or occupied. After you leave a study room, click sanitize to have it cleaned up and ready for the next group to use!</p>
+        <p>The Room Status will tell you if a room is available or occupied. After you leave a study room, click
+            sanitize to have it cleaned up and ready for the next group to use!</p>
     </div>
-</div>
-<h1>
-    The Reserve: Rooms Dashboard
-    <a href="#" class="button round">Create a Room</a>
-</h1>
-<table class="dashboard-table">
+{{!-- Table Code For the Rooms and Buttons --}}
+    <table class="dashboard-table">
     <colgroup>
         <col width="150" />
         <col width="80" />
@@ -38,39 +35,27 @@
         </tr>
     </thead>
     <tbody>
+        {{#each rooms}}
         <tr>
             <td>
                 <div class="flex-container align-justify align-top">
                     <div class="flex-child-shrink">
-                        <img class="dashboard-table-image" src="https://lorempixel.com/50/50/people/" />
                     </div>
                     <div class="flex-child-grow">
-                        <h6 class="dashboard-table-text">Example Room Name</h6>
+                        <h6 class="dashboard-table-text">{{name}}</h6>
                         <!-- <span class="dashboard-table-timestamp">03/04/2017</span> -->
                     </div>
                 </div>
             </td>
-            <td>VACANT</td>
+            <td>{{status}}</td>
             <td class="bold">
                 <a href="#" class="button round">Check-In</a>
                 <a href="#" class="button round">Edit Room</a>
                 <a href="#" class="button round">Delete Room</a>
             </td>
         </tr>
-        <tr>
-            <td>
-                <div class="flex-container align-justify align-top">
-                    <div class="flex-child-shrink">
-                        <img class="dashboard-table-image" src="https://lorempixel.com/50/50/people/" />
-                    </div>
-                    <div class="flex-child-grow">
-                        <h6 class="dashboard-table-text">A Person</h6>
-                        <!-- <span class="dashboard-table-timestamp">03/04/2017</span> -->
-                    </div>
-                </div>
-            </td>
-            <td>Single Line</td>
-            <td class="bold">A Bold Line</td>
-        </tr>
-    </tbody>
-</table>
+        {{/each}}
+     </tbody>
+     </table>
+    </div>
+</div>

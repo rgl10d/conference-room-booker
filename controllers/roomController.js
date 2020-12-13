@@ -14,6 +14,7 @@ router.get("/rooms", (req, res) => {
     });
 });
 
+//POST Route connected to controller for rooms-dashboard
 router.post("/api/rooms", (req, res) => {
     db.Room.create(req.body)
     .then((newRoom) => {

@@ -15,5 +15,9 @@
 * [Foundation Buttons](https://get.foundation/sites/docs-v5/components/buttons.html)
 * [Rest vs Crud: Explaining Rest and Crud Operations](https://www.bmc.com/blogs/rest-vs-crud-whats-the-difference/#:~:text=CRUD%3A%20Foundation%20and%20Principles&text=CRUD%20is%20an%20acronym%20for,as%20primitive%20guidance%2C%20at%20best.)
 * [The 7 Restful Routes!](https://medium.com/@shubhangirajagrawal/the-7-restful-routes-a8e84201f206)
+* [Permissions Error](https://www.reddit.com/r/javascript/comments/8iygni/please_help_permission_errors_with_npm/
+)
+* [Sequelize DataTypes](https://sequelize.org/v5/manual/data-types.html)
+
 
 

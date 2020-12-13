@@ -34,6 +34,17 @@ app.set("view engine", "handlebars");
 
 // Views Routes
 app.get("/", (req, res) => {
+  db.Room.findAll({})
+    .then((allRooms) => {
+      console.log(allRooms);
+      res.render("index", { rooms: allRooms });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+
+app.get("/", (req, res) => {
   res.render("index");
 });
 
@@ -53,6 +64,7 @@ app.get("/api/rooms", (req, res) => {
 
 app.post("/api/rooms", (req, res) => {
   console.log(req.body);
+
 });
 // db.sequelize.sync({ force: true }).then(() => {
 db.sequelize.sync().then(() => {
