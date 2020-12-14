@@ -31,7 +31,6 @@ router.put("/api/rooms/:id", (req, res) => {
     }
   })
     .then((updatedRoom) => {
-      // res.json(updatedRoom)
       res.redirect("/rooms");
     })
     .catch((err) => {
