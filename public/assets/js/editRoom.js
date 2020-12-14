@@ -1,7 +1,7 @@
 $(document).ready(function () {
     var id = location.href.split("room/")[1];
     console.log(id);
-    $("#submit-edit-room").on("click", function (event) {
+    $(document).on("click", function (event) {
         event.preventDefault();
         const room = $("#roomName").val();
         const available = $(":radio:checked").val();
