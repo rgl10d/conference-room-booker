@@ -17,12 +17,12 @@ router.get("/rooms", (req, res) => {
 
 //POST Route connected to controller for putting newly-created rooms on the rooms.handlebars view
 router.post("/api/rooms", (req, res) => {
-    db.Room.create(req.body)
+  db.Room.create(req.body)
     .then((newRoom) => {
-        res.json(newRoom);
+      res.json(newRoom);
     })
     .catch((err) => {
-        console.log(err);
+      console.log(err);
     });
 });
 
@@ -33,12 +33,12 @@ router.put("/api/rooms/:id", (req, res) => {
       id: req.params.id,
     }
   })
-  .then((updatedRoom) => {
-    res.json(updatedRoom)
-  })
-  .catch((err) => {
-    console.log(err);
-  });
+    .then((updatedRoom) => {
+      res.redirect("/rooms");
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 });
 
 //DELETE route for deleting the room that matches a certain id on the rooms.handlebars page
@@ -48,13 +48,13 @@ router.delete("/api/rooms/:id", (req, res) => {
       id: req.body.id
     }
   })
-  .then((response) => {
-    console.log(response);
-    res.json(response);
-  })
-  .catch((err) => {
-    console.log(err);
-  })
+    .then((response) => {
+      console.log(response);
+      res.json(response);
+    })
+    .catch((err) => {
+      console.log(err);
+    })
 });
 
 module.exports = router;
