@@ -7,8 +7,26 @@ const db = require("../models");
 router.get("/rooms", (req, res) => {
   db.Room.findAll({})
     .then((allRooms) => {
-      console.log(allRooms);
+      console.log(allRooms.Room);
       res.render("rooms", { rooms: allRooms });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+
+//GET Route connected to controller to get the edit-room.handlebars page
+router.get("/room/:id", (req, res) => {
+  db.Room.findOne({
+    where: {
+      id: req.params.id
+    }
+  })
+    .then((data) => {
+      var string = JSON.stringify(data);
+      var oneRoom = JSON.parse(string);
+      res.render("edit-room", oneRoom);
+      // res.json(oneRoom);
     })
     .catch((err) => {
       console.log(err);
@@ -30,11 +48,11 @@ router.post("/api/rooms", (req, res) => {
 router.put("/api/rooms/:id", (req, res) => {
   db.Room.update(req.body, {
     where: {
-      id: req.params.id,
+      id: req.params.id
     }
   })
     .then((updatedRoom) => {
-      res.redirect("/rooms");
+      res.json(updatedRoom);
     })
     .catch((err) => {
       console.log(err);
@@ -59,6 +77,6 @@ router.delete("/api/rooms/:id", (req, res) => {
 
 module.exports = router;
 
-router.get("/new", (req, res) =>{
+router.get("/new", (req, res) => {
   res.render("new-room");
 })
