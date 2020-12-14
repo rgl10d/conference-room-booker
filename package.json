@@ -25,6 +25,6 @@
     "handlebars": "^4.7.6",
     "mysql2": "^2.2.5",
     "sequelize": "^6.3.5",
-    "sweetalert2": "^10.12.4"
+    "sweetalert2": "^10.12.5"
   }
 }
