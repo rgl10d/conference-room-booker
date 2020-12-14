@@ -18,6 +18,10 @@
 * [Permissions Error](https://www.reddit.com/r/javascript/comments/8iygni/please_help_permission_errors_with_npm/
 )
 * [Sequelize DataTypes](https://sequelize.org/v5/manual/data-types.html)
+* [jQuery Text Method](https://www.w3schools.com/jquery/html_text.asp)
+* [jQuery On Method](https://www.w3schools.com/jquery/event_on.asp)
+* [event.PreventDefault() Method](https://www.w3schools.com/jquery/event_preventdefault.asp)
+
 
 
 

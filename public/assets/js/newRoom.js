@@ -5,7 +5,6 @@ $( document ).ready(function() {
         event.preventDefault();
         const name = $("#new-room-name").val();
         console.log(name);
-
         $.ajax({
             method: "POST",
             url: "/api/rooms",
