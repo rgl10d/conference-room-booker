@@ -3,7 +3,7 @@ const router = express.Router();
 
 const db = require("../models");
 
-//GET Route connected to controller to get the rooms.handlebars page
+//GET Route connected to controller to get the all the rooms on the rooms.handlebars page
 router.get("/rooms", (req, res) => {
   db.Room.findAll({})
     .then((allRooms) => {
