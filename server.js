@@ -8,7 +8,6 @@ const db = require("./models");
 const app = express();
 
 const roomController = require("./controllers/roomController");
-
 const PORT = process.env.PORT || 8080;
 
 // MIDDLEWARE
