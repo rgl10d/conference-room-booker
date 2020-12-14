@@ -1,0 +1,22 @@
+
+{{!-- Abstracting out the javascript --}}
+<script type="text/javascript" src="/assets/js/editRoom.js"></script>
+{{!-- Create a new room form --}}
+<form id="edit-room-form">
+    <h4>Edit a Study Room</h4>
+    <div class="form-group">
+        <label for="roomName">Room name</label>
+        <input type="text" class="form-control" id="roomName" placeholder="Please enter name of room" value="{{name}}">
+    </div>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="status" id="available" value="true" {{#if status}} checked {{/if}}>
+        <label class="form-check-label" for="available">available</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="status" id="unavailable" value="false" {{#unless status}} checked {{/unless}}>
+        <label class="form-check-label" for="unavailable">not available</label>
+    </div>
+
+    <button class="button expanded" id="submit-edit-room">Edit Room</button>
+</form>
+
