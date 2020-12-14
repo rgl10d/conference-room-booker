@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "GTPTFall2020",
+    "password": "",
     "database": "reserve_db",
     "host": "127.0.0.1",
     "dialect": "mysql"

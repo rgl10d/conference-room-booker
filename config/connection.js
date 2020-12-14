@@ -10,7 +10,7 @@ if (process.env.JAWSDB_URL) {
         host: "localhost",
         user: "root",
         port: 3306,
-        password: "GTPTFall2020",
+        password: "",
         database: "reserve_db"
     });
 };
