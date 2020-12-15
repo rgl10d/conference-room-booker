@@ -70,6 +70,14 @@
     margin-top: 0.6rem;
     max-width: none;
   }
+
+  #title-heading {
+    text-align: center;
+  }
+
+  #instructions {
+    text-align: center;
+  }
   
   /* CSS for the Create a new room (new-room.handlebars page) */
 

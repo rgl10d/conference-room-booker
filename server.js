@@ -1,6 +1,7 @@
 const express = require("express");
 const exphbs = require("express-handlebars");
 const handlebars = require("handlebars");
+const sweetalert2 = require("sweetalert2");
 const {
   allowInsecurePrototypeAccess,
 } = require("@handlebars/allow-prototype-access");
@@ -28,19 +29,26 @@ app.engine(
 );
 app.set("view engine", "handlebars");
 
-// ROUTES
+// Views & API ROUTES:
 
 // Views Routes
+app.get("/", (req, res) => {
+  db.Room.findAll({})
+    .then((allRooms) => {
+      console.log(allRooms);
+      res.render("index", { rooms: allRooms });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+
 app.get("/", (req, res) => {
   res.render("index");
 });
 
-//to show the create new room form
-app.get("/new", (req, res) => {
-  res.render("new-room");
-});
-
 app.use(roomController);
+
 
 // API Routes
 app.get("/api/rooms", (req, res) => {
@@ -51,7 +59,17 @@ app.get("/api/rooms", (req, res) => {
 
 app.post("/api/rooms", (req, res) => {
   console.log(req.body);
+
 });
+
+
+//GET view route to show the create new room form
+app.get("/new", (req, res) => {
+  res.render("new-room");
+});
+
+
+//Syncs the Sequelize models, MySQL reserve_db, and website to keep track of user input
 // db.sequelize.sync({ force: true }).then(() => {
 db.sequelize.sync().then(() => {
   app.listen(PORT, () => {
