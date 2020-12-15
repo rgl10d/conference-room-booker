@@ -1,24 +1,34 @@
 $( document ).ready(function() {
     console.log( "LET'S GET READY TO RUMBLEEEEEEEEEEEEEEEEEEEE!" );
-    // let cBtnsArray = [];
-
-    // cBtnsArray.push($(".check-in-btn"));
-
-    // function theIds(){
-    //     let checkInBtnID = 0
-    //     checkInBtnID++;
-    //     for(i = 0; i++; i < cBtnsArray.length){
-    //         cBtnsArray[i].attr("id", checkInBtnID);
-    //     };
-        
-    // }
     $(".check-in-btn").on("click", function(){
-        console.log("I was clicked");
-        const checkInTxt = $(".check-in-btn");
-        checkInTxt.text("Check-Out");
-
-        this.dataValues.status.val(true);
-        this.dataValues.status.text("Occupied");
+        if($(this).text() === "Check-In"){
+            //SWEET ALERT GOES HERE
+            $(this).text("Check-Out");
+        $.ajax({
+            method: "UPDATE",
+            url: "/api/rooms",
+        }).then((response) =>{
+            window.location.replace("/rooms");
+        });
+        } else if($(this).text() === "Check-Out"){
+            //SWEET ALERT GOES HERE
+            $(this).text("Sanitize");
+        $.ajax({
+            method: "UPDATE",
+            url: "/api/rooms",
+        }).then((response) =>{
+            window.location.replace("/rooms");
+        });            
+        }else if($(this).text() === "Sanitize"){
+            //SWEET ALERT GOES HERE
+            $(this).text("Check-In");
+            $.ajax({
+                method: "UPDATE",
+                url: "/api/rooms",
+            }).then((response) =>{
+                window.location.replace("/rooms");
+            }); 
+        }
     });
 
 
