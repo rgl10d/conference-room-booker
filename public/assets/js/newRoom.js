@@ -1,7 +1,7 @@
 $( document ).ready(function() {
     console.log( "I am still working.");
 
-    $("#new-room-form").on("submit", function(event){
+    $(document).on("submit", function (event) {
         event.preventDefault();
         const name = $("#new-room-name").val();
         console.log(name);
