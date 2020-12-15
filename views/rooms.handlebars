@@ -1,16 +1,17 @@
 {{!-- Rooms Dashboard Heading --}}
-    <h1 id="title-heading">
-        The Reserve: Rooms Dashboard
-    </h1>
+<h1 id="title-heading">
+    The Reserve: Rooms Dashboard
+</h1>
 {{!-- Instructions and Check-In Button --}}
-    <div  id="instructions">
-        <p>To keep adding new rooms to the list, click the Create a Room button.</p>
-        <a href="/new" class="button round">Create a Room</a>
-        <p>Otherwise, click the Check-In button next to the desired room to get started on studying.</p>
-        <p>If the desired room's status is not available, you'll have to wait until the room is sanitized and ready for use.</p>
-    </div>
+<div id="instructions">
+    <p>To keep adding new rooms to the list, click the Create a Room button.</p>
+    <a href="/new" class="button round">Create a Room</a>
+    <p>Otherwise, click the Check-In button next to the desired room to get started on studying.</p>
+    <p>If the desired room's status is not available, you'll have to wait until the room is sanitized and ready for use.
+    </p>
+</div>
 {{!-- Table Code For the Rooms and Buttons --}}
-    <table class="dashboard-table">
+<table class="dashboard-table">
     <colgroup>
         <col width="150" />
         <col width="80" />
@@ -49,11 +50,13 @@
             <td class="bold">
                 <a href="#" class="button round">Check-In</a>
                 <a href="/room/{{id}}" class="button round">Edit Room</a>
-                <a href="#" class="button round">Delete Room</a>
+                <button class="button round delete-room" data-id="{{id}}">Delete Room</button>
             </td>
         </tr>
         {{/each}}
-     </tbody>
-     </table>
-    </div>
+    </tbody>
+</table>
 </div>
+</div>
+
+<script src="assets/js/deleteRoom.js"></script>
