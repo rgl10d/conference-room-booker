@@ -63,7 +63,7 @@ router.put("/api/rooms/:id", (req, res) => {
 router.delete("/api/rooms/:id", (req, res) => {
   db.Room.destroy({
     where: {
-      id: req.body.id
+      id: req.params.id
     }
   })
     .then((response) => {
