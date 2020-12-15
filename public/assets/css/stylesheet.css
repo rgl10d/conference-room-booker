@@ -106,4 +106,17 @@ form .form-icons .fa {
 }
 
 
+/* modal css  */
 
+.first {
+  background: cornflowerblue;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-family: 'Lato';
+  margin: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  outline: none;
+}

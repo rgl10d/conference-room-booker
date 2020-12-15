@@ -19,10 +19,10 @@ $(document).ready(function () {
             window.location.replace("/rooms");
         });
     });
+    // Modal function/
+document.querySelector(".first").addEventListener('click', function(){
+    Swal.fire("Disclaimer message...");
+  });
 
 });
 
-// Modal function/
-// document.querySelector(".first").addEventListener('click', function(){
-//     Swal.fire("Our First Alert");
-//   });

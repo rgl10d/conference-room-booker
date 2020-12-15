@@ -14,16 +14,33 @@
     <!-- Compressed JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js"
         integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
-    {{!-- Sweetalert2 Compressed Javascript Link --}}
-    <script src="sweetalert2/dist/sweetalert2.all.min.js"></script>
-
-    <!-- Include a polyfill for ES6 Promises (optional) for IE11 -->
-    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     {{!-- Link to custom stylesheet --}}
     <link rel="stylesheet" href="assets/css/stylesheet.css" type="text/css" />
+    <script src="/assets/js/newRoom.js"></script>
 </head>
 
 <body>
+  {{!-- Moved the navbar to the main handlebars --}}
+  <nav>
+<div class="top-bar">
+  <div class="top-bar-left">
+    <ul class="dropdown menu" data-dropdown-menu="">
+      <li class="menu-text">The Reserve</li>
+      <li>
+        <a href="#">Home</a>
+        
+      </li>
+      <li><a href="#">New Room</a></li>
+      
+    </ul>
+  </div>
+  <div class="top-bar-right">
+    <ul class="menu">
+     
+  </ul></div>
+</div>
+</nav>
     {{{body}}}
 
 </body>
