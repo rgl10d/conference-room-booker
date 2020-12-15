@@ -21,3 +21,8 @@ $(document).ready(function () {
     });
 
 });
+
+// Modal function/
+// document.querySelector(".first").addEventListener('click', function(){
+//     Swal.fire("Our First Alert");
+//   });
