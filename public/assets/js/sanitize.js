@@ -5,7 +5,7 @@ $( document ).ready(function() {
             //SWEET ALERT GOES HERE
             $(this).text("Check-Out");
         $.ajax({
-            method: "UPDATE",
+            method: "POST",
             url: "/api/rooms",
         }).then((response) =>{
             window.location.replace("/rooms");
@@ -14,7 +14,7 @@ $( document ).ready(function() {
             //SWEET ALERT GOES HERE
             $(this).text("Sanitize");
         $.ajax({
-            method: "UPDATE",
+            method: "POST",
             url: "/api/rooms",
         }).then((response) =>{
             window.location.replace("/rooms");
@@ -23,7 +23,7 @@ $( document ).ready(function() {
             //SWEET ALERT GOES HERE
             $(this).text("Check-In");
             $.ajax({
-                method: "UPDATE",
+                method: "POST",
                 url: "/api/rooms",
             }).then((response) =>{
                 window.location.replace("/rooms");
