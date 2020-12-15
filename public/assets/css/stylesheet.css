@@ -12,7 +12,7 @@ body {
 }
 
 #title-heading {
-  margin: 50px;
+  padding-top: 50px;
   text-align: center;
   color: #050141;
   font-family: Georgia, "Times New Roman", Times, serif;
