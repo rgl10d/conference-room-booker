@@ -46,7 +46,11 @@
                     </div>
                 </div>
             </td>
-            <td>{{status}}</td>
+            {{#if status}}
+                <td>Available</td>
+            {{else}}
+                <td>Not Available</td>
+            {{/if}}
             <td class="bold">
                 <button class="button round check-in-btn" data-id="{{id}}">Check-In</button>
                 <a href="/room/{{id}}" class="button round">Edit Room</a>
