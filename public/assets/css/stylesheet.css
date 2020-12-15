@@ -1,3 +1,4 @@
+
 /* CSS for the rooms-dashboard.handlebars page */
 .dashboard-table {
     border-collapse: collapse;
@@ -103,4 +104,6 @@ form .form-icons .fa {
   color: white;
   width: 1rem;
 }
+
+
 
