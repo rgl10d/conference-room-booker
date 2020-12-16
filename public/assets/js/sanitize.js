@@ -25,6 +25,7 @@ $( document ).ready(function() {
 //To check-out
         }else if($(this).text() === "Check-Out"){
             console.log("checking-out now");
+            const checkOutBtn = $(this).data("sanitize-id");
             Swal.fire({
                 title: 'Leaving so soon?',
                 text: "Are you sure you want to leave?",

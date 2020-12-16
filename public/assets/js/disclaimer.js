@@ -19,6 +19,13 @@ Swal.fire({
       showConfirmButton: false
 
     });
+    $.ajax({
+      method: "PUT",
+      url: "/"
+  })
+  .then((response) =>{
+      window.location.replace("/rooms");
+  });;
   }
 
 })
