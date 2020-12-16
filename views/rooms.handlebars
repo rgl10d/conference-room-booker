@@ -1,17 +1,19 @@
-{{!-- Rooms Dashboard Heading --}}
-<h1 id="title-heading">
-    The Reserve: Rooms Dashboard
-</h1>
+
+
 {{!-- Instructions and Check-In Button --}}
-<div id="instructions">
-    <p>To keep adding new rooms to the list, click the Create a Room button.</p>
-    <a href="/new" class="button round">Create a Room</a>
-    <p>Otherwise, click the Check-In button next to the desired room to get started on studying.</p>
-    <p>If the desired room's status is not available, you'll have to wait until the room is sanitized and ready for use.
-    </p>
-</div>
+    <div  id="instructions">
+    {{!-- Rooms Dashboard Heading --}}
+    <h1 id="title-heading">
+        Rooms Dashboard
+    </h1>
+    <UL>
+        <li style="list-style-type: none;"> To get started, click the "Create a Room" button to customize your study room before the reservation. Or click "Check-In" to reserve a room below if your desired study room is available.</li>
+        <li style="list-style-type: none;"> ** After you leave a study room, be sure to click the "Check-Out" and "Sanitize" button, so the room will cleaned and ready for the next guest(s).**</li>
+    </UL>
+         <a href="/new" class="button round create-room">Create a Room</a>
+    </div>
 {{!-- Table Code For the Rooms and Buttons --}}
-<table class="dashboard-table">
+    <table class="dashboard-table">
     <colgroup>
         <col width="150" />
         <col width="80" />
@@ -47,10 +49,11 @@
                 </div>
             </td>
             {{#if status}}
-                <td>Available</td>
+                <td>available</td>
             {{else}}
-                <td>Not Available</td>
+                <td>not available</td>
             {{/if}}
+            {{!-- <td>{{status}}</td> --}}
             <td class="bold">
                 <a href="#" class="button round">Check-In</a>
                 <a href="/room/{{id}}" class="button round">Edit Room</a>
@@ -58,9 +61,7 @@
             </td>
         </tr>
         {{/each}}
-    </tbody>
-</table>
+     </tbody>
+     </table>
+    </div>
 </div>
-</div>
-
-<script src="assets/js/deleteRoom.js"></script>
