@@ -1,19 +1,20 @@
-
-
 {{!-- Instructions and Check-In Button --}}
-    <div  id="instructions">
+<div id="instructions">
     {{!-- Rooms Dashboard Heading --}}
     <h1 id="title-heading">
         Rooms Dashboard
     </h1>
     <UL>
-        <li style="list-style-type: none;"> To get started, click the "Create a Room" button to customize your study room before the reservation. Or click "Check-In" to reserve a room below if your desired study room is available.</li>
-        <li style="list-style-type: none;"> ** After you leave a study room, be sure to click the "Check-Out" and "Sanitize" button, so the room will cleaned and ready for the next guest(s).**</li>
+        <li style="list-style-type: none;"> To get started, click the "Create a Room" button to customize your study
+            room before the reservation. Or click "Check-In" to reserve a room below if your desired study room is
+            available.</li>
+        <li style="list-style-type: none;"> ** After you leave a study room, be sure to click the "Check-Out" and
+            "Sanitize" button, so the room will cleaned and ready for the next guest(s).**</li>
     </UL>
-         <a href="/new" class="button round create-room">Create a Room</a>
-    </div>
+    <a href="/new" class="button round create-room">Create a Room</a>
+</div>
 {{!-- Table Code For the Rooms and Buttons --}}
-    <table class="dashboard-table">
+<table class="dashboard-table">
     <colgroup>
         <col width="150" />
         <col width="80" />
@@ -49,15 +50,15 @@
                 </div>
             </td>
             {{#if status}}
-                <td>available</td>
+            <td>Available</td>
             {{else}}
-                <td>not available</td>
+            <td>Not Available</td>
             {{/if}}
             {{!-- <td>{{status}}</td> --}}
             <td class="bold">
                 <button class="button round check-in-btn" data-id="{{id}}">Check-In</button>
                 <a href="/room/{{id}}" class="button round">Edit Room</a>
-                <button class="button round delete-room" data-id="{{id}}">Delete Room</button>
+                <a class="button round alert delete-room" data-id="{{id}}">Delete Room</a>
             </td>
         </tr>
         {{/each}}
@@ -67,6 +68,5 @@
 </div>
 {{!-- Link to the Javascript that does the check-in-to-check-out-to-sanitize features --}}
 <script type="text/javascript" src="/assets/js/sanitize.js"></script>
-
 <script src="assets/js/deleteRoom.js"></script>
 <script src="/assets/js/newRoom.js"></script>
