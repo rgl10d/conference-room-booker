@@ -1,87 +1,108 @@
+/* CSS background for the landing page */
+body {
+  background-image: url(/assets/img/college_library5.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background-attachment: fixed;
+}
+
+.landing-page {
+  text-align: center;
+}
+
+#title-heading {
+  padding-top: 50px;
+  text-align: center;
+  color: #050141;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 45px;
+  font-style: oblique;
+}
 
 /* CSS for the rooms-dashboard.handlebars page */
 .dashboard-table {
-    border-collapse: collapse;
-    margin-bottom: 0;
-  }
-  
-  .dashboard-table td {
-    border-bottom: 1px dashed #d7d7d7;
-  }
-  
-  .dashboard-table a {
-    color: #242424;
-  }
-  
-  .dashboard-table .bold {
-    color: #0a0a0a;
-    font-weight: 600;
-  }
-  
-  .dashboard-table thead {
-    background: none;
-    border: 0;
-    border-bottom: 1px solid #e6e6e6;
-    color: #8a8a8a;
-    font-size: 0.8rem;
-  }
-  
-  .dashboard-table thead a {
-    color: #8a8a8a;
-  }
-  
-  .dashboard-table tbody {
-    border: 1px solid #e1e1e1;
-    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15);
-  }
-  
-  .dashboard-table tbody tr {
-    transition: all 0.5s ease;
-  }
-  
-  .dashboard-table tbody tr:hover {
-    background: #fcf7da;
-    transition: all 0.5s ease;
-  }
-  
-  .dashboard-table tbody tr:nth-child(even) {
-    background: none;
-  }
-  
-  .dashboard-table tr:last-child td {
-    border-bottom: 0;
-  }
-  
-  .dashboard-table-text {
-    font-size: 1rem;
-    font-weight: 400;
-    margin-bottom: 0;
-    margin-top: 0.5rem;
-  }
-  
-  .dashboard-table-timestamp {
-    color: #9a9a9a;
-    font-size: 0.9rem;
-    font-weight: 400;
-  }
-  
-  .dashboard-table-image {
-    display: inline;
-    margin-right: 1rem;
-    margin-top: 0.6rem;
-    max-width: none;
-  }
+  border-collapse: collapse;
+  margin-bottom: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 
-  #title-heading {
-    text-align: center;
-  }
+.dashboard-table td {
+  border-bottom: 1px dashed #d7d7d7;
+}
 
-  #instructions {
-    text-align: center;
-  }
-  
-  /* CSS for the Create a new room (new-room.handlebars page) */
+.dashboard-table a {
+  color: #242424;
+}
 
+.dashboard-table .bold {
+  color: #0a0a0a;
+  font-weight: 600;
+}
+
+.dashboard-table thead {
+  /* background: none; */
+  border: 0;
+  border-bottom: 1px solid #e6e6e6;
+  color: #8a8a8a;
+  font-size: 0.8rem;
+}
+
+.dashboard-table thead a {
+  color: #8a8a8a;
+}
+
+.dashboard-table tbody {
+  border: 1px solid #e1e1e1;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15);
+}
+
+.dashboard-table tbody tr {
+  transition: all 0.5s ease;
+}
+
+.dashboard-table tbody tr:hover {
+  background: #fcf7da;
+  transition: all 0.5s ease;
+}
+
+.dashboard-table tbody tr:nth-child(even) {
+  background: none;
+}
+
+.dashboard-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.dashboard-table-text {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0.5rem;
+}
+
+.dashboard-table-timestamp {
+  color: #9a9a9a;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.dashboard-table-image {
+  display: inline;
+  margin-right: 1rem;
+  margin-top: 0.6rem;
+  max-width: none;
+}
+
+.create-room {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#instructions {
+  text-align: center;
+}
+
+/* CSS for the Create a new room (new-room.handlebars page) */
 
 form .form-icons {
   text-align: center;
@@ -105,13 +126,38 @@ form .form-icons .fa {
   width: 1rem;
 }
 
+/* room reservation page background */
+
+#instructions {
+  background-image: url(/assets/img/college_library5.jpg);
+}
+
+#instructions ul {
+  width: 50%;
+  margin: 0 auto;
+  backdrop-filter: blur(10px);
+  padding: 10px;
+  font-weight: bold;
+}
 
 /* modal css  */
-
 body.swal2-shown > [aria-hidden="true"] {
   filter: blur(10px);
 }
 
 body > * {
   transition: 0.1s filter linear;
+
+.first {
+  background: cornflowerblue;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-family: "Lato";
+  margin: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  outline: none;
+  text-align: center;
 }
