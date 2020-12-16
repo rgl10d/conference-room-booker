@@ -20,11 +20,18 @@ body {
   font-style: oblique;
 }
 
-/* CSS for the rooms-dashboard.handlebars page */
+/* CSS for the rooms dashboard page */
+
 .dashboard-table {
+  /* padding-left: 150px; */
+  text-align: center;
   border-collapse: collapse;
   margin-bottom: 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.dashboard-table th {
+  text-align: center;
 }
 
 .dashboard-table td {
@@ -41,7 +48,6 @@ body {
 }
 
 .dashboard-table thead {
-  /* background: none; */
   border: 0;
   border-bottom: 1px solid #e6e6e6;
   color: #8a8a8a;
@@ -87,22 +93,24 @@ body {
   font-weight: 400;
 }
 
-.dashboard-table-image {
+/* .dashboard-table-image {
   display: inline;
   margin-right: 1rem;
   margin-top: 0.6rem;
   max-width: none;
-}
+} */
 
 .create-room {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
 }
 
-#instructions {
-  text-align: center;
+.check-in-btn {
+  font-weight: 600;
 }
 
-/* CSS for the Create a new room (new-room.handlebars page) */
+/* CSS for the create room page */
 
 form .form-icons {
   text-align: center;
@@ -129,6 +137,7 @@ form .form-icons .fa {
 /* room reservation page background */
 
 #instructions {
+  text-align: center;
   background-image: url(/assets/img/college_library5.jpg);
 }
 
@@ -139,6 +148,48 @@ form .form-icons .fa {
   padding: 10px;
   font-weight: bold;
 }
+
+/* CSS for new room page */
+#new-room-form {
+  backdrop-filter: blur(20px);
+  color: #0a023b;
+  font-size: 25px;
+  padding: 30px;
+  width: 40%;
+  margin: 0 auto;
+  padding-bottom: 5px;
+  transform: translateY(50%);
+}
+
+#new-room-form p {
+  font-size: 20px;
+  color: #000;
+}
+
+/* CSS for edit room page */
+#edit-room-form {
+  backdrop-filter: blur(20px);
+  color: #0a023b;
+  font-size: 25px;
+  padding: 30px;
+  width: 40%;
+  margin: 0 auto;
+  padding-bottom: 5px;
+  transform: translateY(50%);
+}
+
+#edit-room-form label {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+h4 {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 600;
+}
+
+/* label[for="rootName"] {} */
 
 /* modal css  */
 body.swal2-shown > [aria-hidden="true"] {
