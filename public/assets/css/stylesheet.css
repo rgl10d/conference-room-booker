@@ -18,7 +18,10 @@ body {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 45px;
   font-style: oblique;
+  font-weight: bolder;
+  backdrop-filter: blur(13px);
 }
+
 
 /* CSS for the rooms-dashboard.handlebars page */
 .dashboard-table {

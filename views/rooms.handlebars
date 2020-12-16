@@ -1,9 +1,11 @@
 {{!-- Instructions and Create-Room "Button" --}}
 <div id="instructions">
     {{!-- Rooms Dashboard Heading --}}
-    <h1 id="title-heading">
+    <div id="title-heading-div">
+        <h1 id="title-heading">
         Rooms Dashboard
-    </h1>
+        </h1>
+    </div>
     <ul>
         <li style="list-style-type: none;"> To get started, click the "Create a Room" button.</li> 
         <li>If the desired room is on the table and available, click "Check-In" to enter the room.</li>
@@ -54,7 +56,6 @@
             {{else}}
             <td>Not Available</td>
             {{/if}}
-            {{!-- <td>{{status}}</td> --}}
             <td class="bold">
                 <a class="button round check-in-btn" data-id="{{id}}">Check-In</a>
                 <a href="/room/{{id}}" class="button round">Edit Room</a>
