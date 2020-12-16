@@ -51,9 +51,9 @@
                 </div>
             </td>
             {{#if status}}
-            <td>Available</td>
+            <td data-id="{{status}}">Available</td>
             {{else}}
-            <td>Not Available</td>
+            <td data-id="{{status}}">Not Available</td>
             {{/if}}
             <td class="bold">
                 <a class="button round check-in-btn" data-id="{{id}}">Check-In</a>
