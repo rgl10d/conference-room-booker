@@ -1,26 +1,28 @@
 // const { default: Swal } = require("sweetalert2");
-
-
 $( document ).ready(function() {
     console.log( "LET'S GET READY TO RUMBLEEEEEEEEEEEEEEEEEEEE!" );
-//To check in
+//To check-in
     $(".check-in-btn").on("click", function(){
         if($(this).text() === "Check-In"){
+            const id = $(this).data("id");
             $(this).text("Check-Out");
-            console.log($(this).data("status"));  
             Swal.fire({
                     title: 'You have successfully checked into a room',
                     text: "Happy studying!",
                     icon: 'success',
                     timer: 3000
-                }).then((result) => {
+                })
+                .then((result) => {
                     $.ajax({
-                        method: "POST",
-                        url: "/api/rooms",
-                    }).then((response) =>{
+                        method: "PUT",
+                        data: {"status": true},
+                        url: `/api/rooms/${id}`
+                    })
+                    .then((response) =>{
                         window.location.replace("/rooms");
                     });
                 });
+//To check-out
         }else if($(this).text() === "Check-Out"){
             console.log("checking-out now");
             Swal.fire({
@@ -38,7 +40,7 @@ $( document ).ready(function() {
                         Swal.fire({
                             title: 'Good work! Click Sanitize to clean up the room for the next group.',
                             icon: 'success',
-                            timer: 5000
+                            timer: 3000
                             })
                     }else{
                         $(this).text("Check-Out");
@@ -46,16 +48,26 @@ $( document ).ready(function() {
                             title: 'No worries,',
                             text: "Back to studying!",
                             icon: 'success',
-                            timer: 3000
+                            timer: 2000
                         })
 
                     }
                 })
+    //To sanitize
         }else if($(this).text() === "Sanitize"){
-
+            $(this).text("Check-In");
+            Swal.fire({
+                title: 'Commencing sanitization',
+                text: "Click OK to begin room sterilization",
+                icon: 'success',
+                preConfirm: true,
+                showLoaderOnConfirm: true,
+                timer: 6000
+            })
         }
+        });
     });
-    });
+
           
 
 

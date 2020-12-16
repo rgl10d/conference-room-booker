@@ -51,12 +51,16 @@
                 </div>
             </td>
             {{#if status}}
-            <td data-id="{{status}}">Available</td>
-            {{else}}
             <td data-id="{{status}}">Not Available</td>
+            {{else}}
+            <td data-id="{{status}}">Available</td>
             {{/if}}
             <td class="bold">
+                {{#if status}}
+                <a class="button round check-in-btn" data-id="{{id}}">Check-Out</a>
+                {{else}}
                 <a class="button round check-in-btn" data-id="{{id}}">Check-In</a>
+                {{/if}}
                 <a href="/room/{{id}}" class="button round">Edit Room</a>
                 <a class="button round alert delete-room" data-id="{{id}}">Delete Room</a>
             </td>
