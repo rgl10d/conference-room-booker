@@ -101,7 +101,12 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-#instructions {
+#instructions{
+  width: 50%;
+  margin: 0 auto;
+  backdrop-filter: blur(10px);
+  padding: 10px;
+  font-weight: bold;
   text-align: center;
 }
 
@@ -127,20 +132,6 @@ form .form-icons .input-group-field {
 form .form-icons .fa {
   color: white;
   width: 1rem;
-}
-
-/* room reservation page background */
-
-#instructions {
-  background-image: url(/assets/img/college_library5.jpg);
-}
-
-#instructions ul {
-  width: 50%;
-  margin: 0 auto;
-  backdrop-filter: blur(10px);
-  padding: 10px;
-  font-weight: bold;
 }
 
 /* modal css  */
@@ -178,4 +169,28 @@ color: black;
 #container-div{
   margin: auto;
   width: 90%;
+}
+
+/* new-room form margin changes */
+#new-room-form {
+  margin: auto;
+  width: 50%;
+
+}
+
+/* new room input style changes */
+#new-room-name {
+  height: 100px;
+  font-size: 40px;
+
+}
+
+/* Create Room Button Changes on new-room form */
+#submit-new-room {
+  font-weight: bolder;
+  color: black;
+}
+
+#submit-new-room:hover {
+  color: white;
 }
