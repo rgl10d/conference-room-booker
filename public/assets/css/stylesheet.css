@@ -18,7 +18,10 @@ body {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 45px;
   font-style: oblique;
+  font-weight: bolder;
+  backdrop-filter: blur(13px);
 }
+
 
 /* CSS for the rooms-dashboard.handlebars page */
 .dashboard-table {
@@ -98,7 +101,12 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-#instructions {
+#instructions{
+  width: 50%;
+  margin: 0 auto;
+  backdrop-filter: blur(10px);
+  padding: 10px;
+  font-weight: bold;
   text-align: center;
 }
 
@@ -126,20 +134,6 @@ form .form-icons .fa {
   width: 1rem;
 }
 
-/* room reservation page background */
-
-#instructions {
-  background-image: url(/assets/img/college_library5.jpg);
-}
-
-#instructions ul {
-  width: 50%;
-  margin: 0 auto;
-  backdrop-filter: blur(10px);
-  padding: 10px;
-  font-weight: bold;
-}
-
 /* modal css  */
 body.swal2-shown > [aria-hidden="true"] {
   filter: blur(10px);
@@ -150,6 +144,7 @@ body > * {
 }
 
 .first {
+  text-decoration: none;
   background: cornflowerblue;
   color: white;
   border: none;
@@ -161,4 +156,41 @@ body > * {
   cursor: pointer;
   outline: none;
   text-align: center;
+}
+
+
+/* Create a room button style changes */
+.create-room {
+font-weight: bolder;
+color: black;
+}
+
+/* Code to center and shrink the table of rooms */
+#container-div{
+  margin: auto;
+  width: 90%;
+}
+
+/* new-room form margin changes */
+#new-room-form {
+  margin: auto;
+  width: 50%;
+
+}
+
+/* new room input style changes */
+#new-room-name {
+  height: 100px;
+  font-size: 40px;
+
+}
+
+/* Create Room Button Changes on new-room form */
+#submit-new-room {
+  font-weight: bolder;
+  color: black;
+}
+
+#submit-new-room:hover {
+  color: white;
 }
