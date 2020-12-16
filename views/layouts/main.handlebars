@@ -18,7 +18,6 @@
     {{!-- Link to custom stylesheet --}}
     <link rel="stylesheet" href="/assets/css/stylesheet.css" type="text/css" />
     <script src="/assets/js/newRoom.js"></script>
-    
 </head>
 
 <body>
@@ -29,10 +28,12 @@
     <ul class="dropdown menu" data-dropdown-menu="">
       <li class="menu-text">The Reserve</li>
       <li>
-        <a href="#">Home</a>
+        {{!-- Added a link to the home page --}}
+        <a href="/">Home</a>
         
       </li>
-      <li><a href="#">New Room</a></li>
+      {{!-- Added links to the room --}}
+      <li><a href="/new">New Room</a></li>
       
     </ul>
   </div>
