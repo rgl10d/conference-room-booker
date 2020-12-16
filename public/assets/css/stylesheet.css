@@ -150,6 +150,7 @@ body > * {
 }
 
 .first {
+  text-decoration: none;
   background: cornflowerblue;
   color: white;
   border: none;
@@ -161,4 +162,10 @@ body > * {
   cursor: pointer;
   outline: none;
   text-align: center;
+}
+
+
+/* Create a room button style changes */
+.create-room {
+font-weight: bolder;
 }
