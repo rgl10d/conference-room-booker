@@ -169,3 +169,9 @@ body > * {
 .create-room {
 font-weight: bolder;
 }
+
+/* Code to center and shrink the table of rooms */
+#container-div{
+  margin: auto;
+  width: 90%;
+}
