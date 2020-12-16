@@ -168,6 +168,7 @@ body > * {
 /* Create a room button style changes */
 .create-room {
 font-weight: bolder;
+color: black;
 }
 
 /* Code to center and shrink the table of rooms */
