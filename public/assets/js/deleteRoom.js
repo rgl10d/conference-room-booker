@@ -1,5 +1,6 @@
 $(document).ready(function () {
   $(".delete-room").on("click", function () {
+    console.log("Delete is pressed.");
     const id = $(this).data("id");
     Swal.fire({
       title: 'Do you want to delete this room?',
