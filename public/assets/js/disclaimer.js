@@ -17,10 +17,9 @@ Swal.fire({
       allowOutsideClick: false,
       showCancelButton: false,
       showConfirmButton: false
-
     });
     $.ajax({
-      method: "PUT",
+      method: "POST",
       url: "/"
   })
   .then((response) =>{
