@@ -147,6 +147,7 @@ body.swal2-shown > [aria-hidden="true"] {
 
 body > * {
   transition: 0.1s filter linear;
+}
 
 .first {
   background: cornflowerblue;

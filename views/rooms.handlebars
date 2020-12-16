@@ -29,7 +29,7 @@
                 <a href="#">Rooms<i class="fa fa-caret-down"></i></a>
             </th>
             <th>
-                <a href="#">Room Status<i class="fa fa-caret-down"></i></a>
+                <a href="#" id="room-status">Room Status<i class="fa fa-caret-down"></i></a>
             </th>
             <th>
                 <a href="#">Options<i class="fa fa-caret-down"></i></a>
@@ -41,8 +41,8 @@
         <tr>
             <td>
                 <div class="flex-container align-justify align-top">
-                    <div class="flex-child-shrink">
-                    </div>
+                    {{!-- <div class="flex-child-shrink">
+                    </div> --}}
                     <div class="flex-child-grow">
                         <h6 class="dashboard-table-text">{{name}}</h6>
                         <!-- <span class="dashboard-table-timestamp">03/04/2017</span> -->
@@ -56,7 +56,7 @@
             {{/if}}
             {{!-- <td>{{status}}</td> --}}
             <td class="bold">
-                <a href="#" class="button round">Check-In</a>
+                <button class="button round check-in-btn" data-id="{{id}}">Check-In</button>
                 <a href="/room/{{id}}" class="button round">Edit Room</a>
                 <a class="button round alert delete-room" data-id="{{id}}">Delete Room</a>
             </td>
@@ -66,5 +66,7 @@
 </table>
 </div>
 </div>
-
+{{!-- Link to the Javascript that does the check-in-to-check-out-to-sanitize features --}}
+<script type="text/javascript" src="/assets/js/sanitize.js"></script>
 <script src="assets/js/deleteRoom.js"></script>
+<script src="/assets/js/newRoom.js"></script>
