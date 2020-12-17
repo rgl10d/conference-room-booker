@@ -5,18 +5,20 @@
 <form id="edit-room-form">
     <h4>Edit a Study Room</h4>
     <div class="form-group">
-        <label for="roomName">Room name</label>
+        <label for="roomName">Please update the room name below</label>
         <input type="text" class="form-control" id="roomName" placeholder="Please enter name of room" value="{{name}}">
     </div>
-    <div class="form-check form-check-inline">
+
+    {{!-- Available/ Not Available Status --}}
+    {{!-- <div class="form-check form-check-inline">
         <input class="form-check-input" type="radio" name="status" id="available" value="true" {{#if status}} checked {{/if}}>
-        <label class="form-check-label" for="available">available</label>
+        <label class="form-check-label" for="available">Available</label>
     </div>
     <div class="form-check form-check-inline">
         <input class="form-check-input" type="radio" name="status" id="unavailable" value="false" {{#unless status}} checked {{/unless}}>
-        <label class="form-check-label" for="unavailable">not available</label>
-    </div>
+        <label class="form-check-label" for="unavailable">Not Available</label>
+    </div> --}}
 
-    <button class="button expanded" id="submit-edit-room">Edit Room</button>
+    <button class="button expanded" id="submit-edit-room">Submit Change</button>
 </form>
 
