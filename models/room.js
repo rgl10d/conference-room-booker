@@ -12,6 +12,10 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.BOOLEAN,
             allowNull: false,
             defaultValue: false
+        },
+        needClean: {
+            type: DataTypes.BOOLEAN,
+            default: false
         }
         // ,
         // capacity: {
