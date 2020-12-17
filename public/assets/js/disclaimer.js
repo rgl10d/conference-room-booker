@@ -8,8 +8,7 @@ Swal.fire({
   confirmButtonText: "OK, I agree.",
   cancelButtonText: "Cancel"
 }).then((result) =>{
-  if(result.isConfirmed){
-  }else{
+  if(result.isDismissed){
     Swal.fire({
       icon: error,
       title: "HTTP 403 Error",
