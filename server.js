@@ -72,7 +72,7 @@ app.get("/room/:id", (req, res) => {
   res.render("edit-room");
 });
 
-//Syncs the Sequelize models, MySQL reserve_db, and website to keep track of user input
+// Syncs the Sequelize models, MySQL reserve_db, and website to keep track of user input
 // db.sequelize.sync({ force: true }).then(() => {
 db.sequelize.sync().then(() => {
   app.listen(PORT, () => {
