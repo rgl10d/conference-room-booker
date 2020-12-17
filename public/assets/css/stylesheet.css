@@ -1,5 +1,4 @@
-/* CSS background for landing page */
-
+/* CSS background for the landing page */
 body {
   background-image: url(/assets/img/college_library5.jpg);
   background-size: cover;
@@ -19,8 +18,6 @@ body {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 40px;
   font-style: oblique;
-  font-weight: bolder;
-  backdrop-filter: blur(13px);
 }
 
 /* CSS for the rooms dashboard page */
@@ -204,7 +201,6 @@ body > * {
 }
 
 .first {
-  text-decoration: none;
   background: cornflowerblue;
   color: white;
   border: none;
@@ -216,38 +212,4 @@ body > * {
   cursor: pointer;
   outline: none;
   text-align: center;
-}
-
-/* Create a room button style changes */
-.create-room {
-  font-weight: bolder;
-  color: black;
-}
-
-/* Code to center and shrink the table of rooms */
-#container-div {
-  margin: auto;
-  width: 90%;
-}
-
-/* new-room form margin changes */
-#new-room-form {
-  margin: auto;
-  width: 50%;
-}
-
-/* new room input style changes */
-#new-room-name {
-  height: 100px;
-  font-size: 40px;
-}
-
-/* Create Room Button Changes on new-room form */
-#submit-new-room {
-  font-weight: bolder;
-  color: black;
-}
-
-#submit-new-room:hover {
-  color: white;
 }
