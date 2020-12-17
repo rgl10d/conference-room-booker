@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "",
+    "password": "jungleJimothy-1211",
     "database": "reserve_db",
     "host": "127.0.0.1",
     "dialect": "mysql"

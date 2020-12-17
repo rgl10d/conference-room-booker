@@ -71,7 +71,7 @@ $(document).ready(function () {
         icon: "success",
         preConfirm: true,
         showLoaderOnConfirm: true,
-        timer: 6000,
+        timer: 3000,
       }).then((result) => {
         $(this).text("Check-In");
         // AJAX to update status to "Available"
