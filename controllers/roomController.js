@@ -44,18 +44,6 @@ router.post("/api/rooms", (req, res) => {
     });
 });
 
-//POST Route connected to controller for putting data on the index.handlebars view
-router.post("/", (req, res) => {
-  db.Room.create(req.body)
-    .then((index) => {
-      res.json(index);
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
-
-
 //PUT route for updating the room that matches a certain id on the rooms.handlebars page (should be linked to a page that takes the user to another window with the room's info already displayed and ready for the user to edit)
 router.put("/api/rooms/:id", (req, res) => {
   db.Room.update(req.body, {
