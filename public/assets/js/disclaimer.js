@@ -1,3 +1,5 @@
+// const { default: Swal } = require("sweetalert2");
+
 $( document ).ready(function() {
 Swal.fire({
   title: "COVID-19 Disclaimer:",
@@ -8,22 +10,20 @@ Swal.fire({
   confirmButtonText: "OK, I agree.",
   cancelButtonText: "Cancel"
 }).then((result) =>{
-  if(result.isDismissed){
+  if(result.isConfirmed){
     Swal.fire({
-      icon: error,
+      text: "Welcome to The Reserve!",
+      showConfirmButton: true,
+    })
+  }else{
+    Swal.fire({
+      icon: 'error',
       title: "HTTP 403 Error",
       text: "User may not enter site until terms and conditions are agreed to.",
       allowOutsideClick: false,
       showCancelButton: false,
       showConfirmButton: false
     });
-    $.ajax({
-      method: "POST",
-      url: "/"
-  })
-  .then((response) =>{
-      window.location.replace("/rooms");
-  });;
   }
 
 })
