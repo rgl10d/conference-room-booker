@@ -7,8 +7,16 @@ const db = require("../models");
 router.get("/rooms", (req, res) => {
   db.Room.findAll({})
     .then((allRooms) => {
-      console.log(allRooms.Room);
-      res.render("rooms", { rooms: allRooms });
+      //console.log(allRooms);
+      const allRoomsFormatted = allRooms.map(room => {
+        room.dataValues.showCheckOut = room.status && !room.needClean;
+        room.dataValues.showSanitize = room.needClean;
+        room.dataValues.showCheckIn = !room.status && !room.needClean;
+        return room.dataValues;
+      })
+      console.log("HERE ARE ALL MY FORMATTED ROOMS")
+      console.log(allRoomsFormatted)
+      res.render("rooms", { rooms: allRoomsFormatted });
     })
     .catch((err) => {
       console.log(err);

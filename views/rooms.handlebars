@@ -3,72 +3,77 @@
     {{!-- Rooms Dashboard Heading --}}
     <div id="title-heading-div">
         <h1 id="title-heading">
-        Rooms Dashboard
+            Rooms Dashboard
         </h1>
     </div>
     <ul>
-        <li style="list-style-type: none;"> To get started, click the "Create a Room" button.</li> 
-        <li style="list-style-type: none;">If the desired room is on the table and available, click "Check-In" to enter the room.</li>
+        <li style="list-style-type: none;"> To get started, click the "Create a Room" button.</li>
+        <li style="list-style-type: none;">If the desired room is on the table and available, click "Check-In" to enter
+            the room.</li>
         <li style="list-style-type: none;"> ** After check-out, click sanitize to have the room cleaned.**</li>
     </ul>
     <a href="/new" class="button round create-room">Create a Room</a>
 </div>
 {{!-- Table Code For the Rooms and Buttons --}}
-    <div id="container-div">
-        <table class="dashboard-table">
-    <colgroup>
-        <col width="150" />
-        <col width="80" />
-        <col width="200" />
-        <col width="60" />
-        <col width="220" />
-        <col width="170" />
-    </colgroup>
-    <thead>
-        <tr>
-            <th>
-                <a href="#">Rooms<i class="fa fa-caret-down"></i></a>
-            </th>
-            <th>
-                <a href="#" id="room-status">Room Status<i class="fa fa-caret-down"></i></a>
-            </th>
-            <th>
-                <a href="#">Options<i class="fa fa-caret-down"></i></a>
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        {{#each rooms}}
-        <tr>
-            <td>
-                <div class="flex-container align-justify align-top">
-                    {{!-- <div class="flex-child-shrink">
-                    </div> --}}
-                    <div class="flex-child-grow">
-                        <h6 class="dashboard-table-text">{{name}}</h6>
-                        <!-- <span class="dashboard-table-timestamp">03/04/2017</span> -->
+<div id="container-div">
+    <table class="dashboard-table">
+        <colgroup>
+            <col width="150" />
+            <col width="80" />
+            <col width="200" />
+            <col width="60" />
+            <col width="220" />
+            <col width="170" />
+        </colgroup>
+        <thead>
+            <tr>
+                <th>
+                    <a href="#">Rooms<i class="fa fa-caret-down"></i></a>
+                </th>
+                <th>
+                    <a href="#" id="room-status">Room Status<i class="fa fa-caret-down"></i></a>
+                </th>
+                <th>
+                    <a href="#">Options<i class="fa fa-caret-down"></i></a>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each rooms}}
+            <tr>
+                <td>
+                    <div class="flex-container align-justify align-top">
+                        {{!-- <div class="flex-child-shrink">
+                        </div> --}}
+                        <div class="flex-child-grow">
+                            <h6 class="dashboard-table-text">{{name}}</h6>
+                            <!-- <span class="dashboard-table-timestamp">03/04/2017</span> -->
+                        </div>
                     </div>
-                </div>
-            </td>
-            {{#if status}}
-            <td data-id="{{status}}">Not Available</td>
-            {{else}}
-            <td data-id="{{status}}">Available</td>
-            {{/if}}
-            <td class="bold">
+                </td>
                 {{#if status}}
-                <a class="button round check-in-btn" data-id="{{id}}" data-sanitize-id="{{id}}">Check-Out</a>
+                <td data-id="{{status}}">Not Available</td>
                 {{else}}
-                <a class="button round check-in-btn" data-id="{{id}}">Check-In</a>
+                <td data-id="{{status}}">Available</td>
                 {{/if}}
-                <a href="/room/{{id}}" class="button round">Edit Room</a>
-                <a class="button round alert delete-room" data-id="{{id}}">Delete Room</a>
-            </td>
-        </tr>
-        {{/each}}
-    </tbody>
-</table>
-    </div>
+                <td class="bold">
+                    {{#if showCheckOut}}
+                        <a class="button round check-in-btn" data-id="{{id}}">Check-Out</a>
+                    {{/if}}
+                    {{#if showSanitize}}
+                    <a class="button round check-in-btn" data-id="{{id}}">Sanitize</a>
+                    {{/if}}
+                    {{#if showCheckIn}}
+                     <a class="button round check-in-btn" data-id="{{id}}">Check-In</a>
+                    {{/if}}
+                    <a href="/room/{{id}}" class="button round">Edit Room</a>
+                    <a class="button round alert delete-room" data-id="{{id}}">Delete Room</a>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
 
 
 
@@ -77,4 +82,3 @@
 {{!-- Link to the Javascript that does the check-in-to-check-out-to-sanitize features --}}
 <script type="text/javascript" src="/assets/js/sanitize.js"></script>
 <script src="assets/js/deleteRoom.js"></script>
-<script src="/assets/js/newRoom.js"></script>
