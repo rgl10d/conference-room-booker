@@ -1,35 +1,51 @@
 # The Reserve [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+![The Reserve Demo]()
+
+
+[The Reserve Site]()
+
+
 ## Description 
 
-DESCRIPTION
+The Reserve is a room reservation app that allows college campus library managers to create a log of study rooms. In doing so, it's easier for the manager to keep track of which rooms are in use, empty, or in need of cleaning. 
+
 
 Technologies used:
-- TECH
+- CSS (Foundation Frameworks)
+- Handlebars
+- Express-handlebars
+- Sweetalert 2
+- MySQL2
+- Sequelize
+
 
 ## Table of Contents
 
-* [Installation](#installation)
+* [Description](#description)
+* [User Story](#user-story)
 * [Usage](#usage)
-* [Questions](#questions)
+* [Credits](#credits)
 * [License](#license)
+* [Sources](#sources)
 
-## Installation
-INSTALLATION
+
+
+## User Story
+
+AS a library manager, who is cautious of COVID-19.
+I WANT to be able to create a study room, change the availability of the room, and clean the room after each use.
 
 ## Usage 
-USAGE
+Once a student is checked into a room, the room's status becomes "Not Available." After check-out, the room's status does not become "Available" until the room has been sterilized (using the "sanitize" feature). Sanitization after each use of a room is suggested in accordance with COVID safety purposes. Later versions of the app will allow documentation of student names and the time at which reservations are opened, for use with contact tracing.
 
-![screenshot]()
 
 ## Credits
-CREDITS
+* [Garrett Lee](https://github.com/rgl10d)
+* [Irene Asay](https://github.com/IreneAsay)
+* [Val Kimani](https://github.com/Valkimani)
+* [Ashley Ikeh](https://github.com/Aikeh2021)
 
-## Questions?
-
-Visit me at my GitHub page:
-
-Or email me: 
 
 ## License
 
@@ -55,23 +71,6 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-## Contents
-
-* [Description](#description)
-* [User Story](#user-story)
-* [Sources](#sources)
-* [License](#license)
-
-
-## Description: 
-
-The Reserve is a room reservation app that allows college campus library managers to create a log of study rooms. In doing so, it's easier for the manager to keep track of which rooms are in use, empty, or in need of cleaning. Once a student is checked into a room, the room's status becomes "Not Available." After check-out, the room's status does not become until the room has been sterilized (using the "sanitize" feature). Sanitization after each use of a room is suggested in accordance with COVID safety purposes. Later versions of the app will allow documentation of student names and the time at which reservations are opened, for use with contact tracing.
-
-
-## User Story:
-
-AS a student cautious of covid 19 virus
-I WANT to be able to check the availability of a study room and reserve one.
 
 
 ## Sources:
@@ -101,7 +100,6 @@ I WANT to be able to check the availability of a study room and reserve one.
 * [HTTP Error Types](https://www.restapitutorial.com/httpstatuscodes.html)
 
 
-
 ## License:
 
 MIT License
@@ -125,4 +123,10 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+
+
+
+
+
 
