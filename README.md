@@ -1,5 +1,24 @@
 # conference-room-booker
 
+## Contents
+
+* [Description](#description)
+* [User Story](#user-story)
+* [Sources](#sources)
+* [License](#license)
+
+
+## Description: 
+
+The Reserve is a room reservation app that allows college campus library managers to create a log of study rooms. In doing so, it's easier for the manager to keep track of which rooms are in use, empty, or in need of cleaning. Once a student is checked into a room, the room's status becomes "Not Available." After check-out, the room's status does not become until the room has been sterilized (using the "sanitize" feature). Sanitization after each use of a room is suggested in accordance with COVID safety purposes. Later versions of the app will allow documentation of student names and the time at which reservations are opened, for use with contact tracing.
+
+
+## User Story:
+
+AS a student cautious of covid 19 virus
+I WANT to be able to check the availability of a study room and reserve one.
+
+
 ## Sources:
 
 * [jQuery CDN Link](https://code.jquery.com)
@@ -21,7 +40,34 @@
 * [jQuery Text Method](https://www.w3schools.com/jquery/html_text.asp)
 * [jQuery On Method](https://www.w3schools.com/jquery/event_on.asp)
 * [event.PreventDefault() Method](https://www.w3schools.com/jquery/event_preventdefault.asp)
+* [SweetAlert2](https://sweetalert2.github.io/#showLoading)
+* [Handlebars](https://handlebarsjs.com/guide/#what-is-handlebars)
+* [Prevent SweetAlert to Be Closed](https://stackoverflow.com/questions/47749095/prevent-sweetalert-to-be-closed-on-clicking-outside-the-popup-window)
+* [HTTP Error Types](https://www.restapitutorial.com/httpstatuscodes.html)
 
 
 
+## License:
+
+MIT License
+
+Copyright © 2020 Garrett Lee, Irene Asay, Val Kimani, Ashley Ikeh
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
