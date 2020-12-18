@@ -16,8 +16,12 @@ body {
   text-align: center;
   color: #050141;
   font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 40px;
+  font-size: 35px;
   font-style: oblique;
+  backdrop-filter: blur(20px);
+  padding-bottom: 5px;
+  width: 50%;
+  margin: 0 auto;
 }
 
 /* CSS for the rooms dashboard page */
@@ -93,13 +97,6 @@ body {
   font-weight: 400;
 }
 
-/* .dashboard-table-image {
-  display: inline;
-  margin-right: 1rem;
-  margin-top: 0.6rem;
-  max-width: none;
-} */
-
 .create-room {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 18px;
@@ -144,8 +141,9 @@ form .form-icons .fa {
 #instructions ul {
   width: 50%;
   margin: 0 auto;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(20px);
   padding: 10px;
+  padding-top: 25px;
   font-weight: bold;
 }
 
@@ -189,8 +187,6 @@ h4 {
   font-weight: 600;
 }
 
-/* label[for="rootName"] {} */
-
 /* modal css  */
 body.swal2-shown > [aria-hidden="true"] {
   filter: blur(10px);
@@ -207,9 +203,13 @@ body > * {
   padding: 10px;
   border-radius: 8px;
   font-family: "Lato";
-  margin: 5px;
+  margin-top: 20px;
   text-transform: uppercase;
   cursor: pointer;
   outline: none;
   text-align: center;
+}
+
+.first-div {
+  margin-top: 25px;
 }
