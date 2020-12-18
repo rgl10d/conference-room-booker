@@ -6,7 +6,6 @@ $(document).ready(function () {
     if ($(this).text() === "Check-In") {
       const id = $(this).data("id");
       console.log("ID: ", id);
-      // $(this).text("Check-Out");
       Swal.fire({
         title: "You have successfully checked into a room",
         text: "Happy studying!",
@@ -37,7 +36,6 @@ $(document).ready(function () {
         confirmButtonText: "Yes, exit room",
       }).then((result) => {
         if (result.isConfirmed) {
-          // $(this).text("Sanitize");
           Swal.fire({
             title:
               "Good work! Click Sanitize to clean up the room for the next group.",
