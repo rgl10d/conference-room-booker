@@ -17,6 +17,7 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.BOOLEAN,
             default: false
         }
+        // For future room size implementation
         // ,
         // capacity: {
         //     type: DataTypes.INTEGER,

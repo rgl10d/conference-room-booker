@@ -29,8 +29,6 @@ app.engine(
 );
 app.set("view engine", "handlebars");
 
-// Views & API ROUTES:
-
 // Views Routes
 app.get("/", (req, res) => {
   db.Room.findAll({})
