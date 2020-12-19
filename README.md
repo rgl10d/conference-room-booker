@@ -5,7 +5,12 @@
 DESCRIPTION
 
 Technologies used:
-- TECH
+SweetAlert2 was used to help with validation. To use it, the Css and Javascript files have to be imported from the SweetAlert2 website. Applied on all pop up messages on the app.
+[SweetAlert2](https://www.npmjs.com/package/sweetalert2)
+
+Front End Framework
+Foundation advanced responsive front-end framework used for building website front-ends and app UI. 
+
 
 ## Table of Contents
 
@@ -19,6 +24,17 @@ INSTALLATION
 
 ## Usage 
 USAGE
+The app will be used by library managers to reserve study rooms for students. Future improvements on the app will make the app available to students to be able to reserve rooms on a mobile device or a desktop.
+
+## ACCEPTANCE CRITERIA
+GIVEN I need a study room
+WHEN I land on the page I am presented with a Covid-19 disclaimer asking me to agree or cancel
+THEN I agree to the disclaimer terms and click agree
+WHEN presented with the rooms dashboard, I see a navbar with links to navigate the page and a button to proceed to the website
+THEN I click on proceed to website button and create a room
+IF the room is available, I check in and the status changes to not available 
+THEN  I checkout and the button changes to sanitize
+WHEN sanitization is over, the room is back to available and ready for check-in
 
 ![screenshot]()
 
@@ -35,7 +51,7 @@ Or email me:
 
 MIT License
 
-Copyright © [2020] [Garrett Lee]
+Copyright © [2020] [Valentine Kimani]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
