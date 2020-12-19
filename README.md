@@ -33,34 +33,6 @@ Foundation advanced responsive front-end framework used for building website fro
 * [License](#license)
 * [Sources](#sources)
 
-
-## User Story
-AS a library manager, who is cautious of COVID-19.
-I WANT to be able to create a study room, change the availability of the room, and clean the room after each use.
-
-## Usage 
-The app will be used by library managers to reserve study rooms for students. Future improvements on the app will make the app available to students to be able to reserve rooms on a mobile device or a desktop.
-
-## ACCEPTANCE CRITERIA
-GIVEN I need a study room
-WHEN I land on the page I am presented with a Covid-19 disclaimer asking me to agree or cancel
-THEN I agree to the disclaimer terms and click agree
-WHEN presented with the rooms dashboard, I see a navbar with links to navigate the page and a button to proceed to the website
-THEN I click on proceed to website button and create a room
-IF the room is available, I check in and the status changes to not available 
-THEN  I checkout and the button changes to sanitize
-WHEN sanitization is over, the room is back to available and ready for check-in
-
-
-
-## Credits
-* [Garrett Lee](https://github.com/rgl10d)
-* [Irene Asay](https://github.com/IreneAsay)
-* [Val Kimani](https://github.com/Valkimani)
-* [Ashley Ikeh](https://github.com/Aikeh2021)
-
-
-
 ## User Story
 
 AS a library manager, who is cautious of COVID-19.
@@ -68,8 +40,6 @@ I WANT to be able to create a study room, change the availability of the room, a
 
 ## Usage 
 Once a student is checked into a room, the room's status becomes "Not Available." After check-out, the room's status does not become "Available" until the room has been sterilized (using the "sanitize" feature). Sanitization after each use of a room is suggested in accordance with COVID safety purposes. Later versions of the app will allow documentation of student names and the time at which reservations are opened, for use with contact tracing.
-
-
 
 ## Credits
 * [Garrett Lee](https://github.com/rgl10d)
@@ -102,7 +72,6 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
 
 
 ## Sources:
