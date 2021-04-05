@@ -1,6 +1,7 @@
 const express = require("express");
 const exphbs = require("express-handlebars");
 const handlebars = require("handlebars");
+// const compression = require("compression");
 const {
   allowInsecurePrototypeAccess,
 } = require("@handlebars/allow-prototype-access");
@@ -16,8 +17,13 @@ const PORT = process.env.PORT || 8080;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+
+
 // Static directory to be served
 app.use(express.static("public"));
+
+//Compression
+// app.use(compression());
 
 // Configure express-handlebars
 app.engine(

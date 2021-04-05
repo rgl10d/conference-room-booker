@@ -43,11 +43,7 @@ body {
 }
 
 .dashboard-table a {
-  color: #242424;
-}
-
-.dashboard-table .bold {
-  color: #0a0a0a;
+  color: white;
   font-weight: 600;
 }
 
@@ -105,6 +101,11 @@ body {
 
 .check-in-btn {
   font-weight: 600;
+  color: white;
+}
+
+.check-in-btn:hover {
+  color: white;
 }
 
 /* CSS for the create room page */
@@ -205,9 +206,12 @@ body > * {
   font-family: "Lato";
   margin-top: 20px;
   text-transform: uppercase;
-  cursor: pointer;
   outline: none;
   text-align: center;
+}
+
+.first:hover {
+  color: white;
 }
 
 .first-div {
